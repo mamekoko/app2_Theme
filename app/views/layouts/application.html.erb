@@ -14,12 +14,14 @@
     
     <header>
       
-      <span>
-        <%= link_to "Bookers", "homes#top" %>
-      </span>
+     
       
     <% if user_signed_in? %>
       <div class="container">
+        
+        <span>
+        <%= link_to "Bookers", "homes#top" %>
+        </span>
         
         <%= link_to "Home", "homes#top" %>
         /
@@ -33,6 +35,11 @@
       
     <% else %>
       <div class="container">
+        
+        <span>
+        <%= link_to "Bookers", "homes#top" %>
+        </span>
+        
         <%= link_to "Home", "top" %>
         /
         <%= link_to "About", "homes#about" %>
