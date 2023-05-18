@@ -11,54 +11,54 @@
   </head>
 
   <body>
-    
+
     <header>
-      
-     
-      
+
+
+
     <% if user_signed_in? %>
       <div class="container">
-        
-        <span>
-        <%= link_to "Bookers", "homes#top" %>
+
+        <span class="navbar-brand">
+        <%= link_to "Bookers", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com" %>
         </span>
-        
-        <%= link_to "Home", "homes#top" %>
+
+        <%= link_to "Home", "/users" %>
         /
         <%= link_to "Users", "/users" %>
         /
         <%= link_to "Books", "/books" %>
         /
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-        
+
       </div>
-      
+
     <% else %>
       <div class="container">
-        
+
         <span>
-        <%= link_to "Bookers", "homes#top" %>
+        <%= link_to "Bookers", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com" %>
         </span>
-        
-        <%= link_to "Home", "top" %>
+
+        <%= link_to "Home", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com" %>
         /
-        <%= link_to "About", "homes#about" %>
+        <%= link_to "About", "homes/about" %>
         /
         <%= link_to "Sign Up", new_user_registration_path %>
         /
         <%= link_to "Log in", new_user_session_path %>
-        
+
       </div>
-      
+
     <% end %>
-    
+
   </header>
-  
-  
+
+
   <footer>
     <p>CopyRight Infratop.inc</p>
   </footer>
-    
+
     <%= yield %>
   </body>
 </html>
