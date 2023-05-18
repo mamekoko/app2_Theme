@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bookers2</title>
+    <title>Bookers2 Ver2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -14,20 +14,43 @@
     
     <header>
       
+      <span>
+        <%= link_to "Bookers", "homes#top" %>
+      </span>
+      
     <% if user_signed_in? %>
-      <li>
+      <div class="container">
+        
+        <%= link_to "Home", "homes#top" %>
+        /
+        <%= link_to "Users", "/users" %>
+        /
+        <%= link_to "Books", "/books" %>
+        /
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      </li>
+        
+      </div>
+      
     <% else %>
-      <li>
+      <div class="container">
+        <%= link_to "Home", "top" %>
+        /
+        <%= link_to "About", "homes#about" %>
+        /
         <%= link_to "Sign Up", new_user_registration_path %>
-      </li>
-      <li>
+        /
         <%= link_to "Log in", new_user_session_path %>
-      </li>
+        
+      </div>
+      
     <% end %>
     
   </header>
+  
+  
+  <footer>
+    <p>CopyRight Infratop.inc</p>
+  </footer>
     
     <%= yield %>
   </body>
