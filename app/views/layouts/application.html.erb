@@ -33,14 +33,17 @@
         </li>
 
         <li class="nav-link text-light">
+          <i class="fas fa-users"></i>
           <%= link_to "Users", "/users" %>
         </li>
 
         <li class="nav-link text-light">
+          <i class="fas fa-book-open"></i>
           <%= link_to "Books", "/books" %>
         </li>
 
         <li class="nav-link text-light">
+          <i class="fas fa-sign-in-alt"></i>
           <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         </li>
 
@@ -58,18 +61,22 @@
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-link text-light">
+          <i class="fas fa-home"></i>
           <%= link_to "Home", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com" %>
         </li>
 
         <li class="nav-link text-light">
+          <i class="fas fa-link"></i>
           <%= link_to "About", "homes/about" %>
         </li>
 
         <li class="nav-link text-light">
+          <i class="fas fa-user-plus"></i>
           <%= link_to "Sign Up", new_user_registration_path %>
         </li>
 
         <li class="nav-link text-ligth">
+          <i class="fas fa-sign-in-alt"></i>
           <%= link_to "Log in", new_user_session_path %>
         </li>
 
@@ -85,9 +92,26 @@
 
 
   <footer>
-    <p>CopyRight Infratop.inc</p>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="mx-auto">
+          <p>CopyRight Infratop.inc</p>
+        </div>
+      </div>
+    </div>
   </footer>
 
     <%= yield %>
+    
+    <footer>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="mx-auto">
+          <p>CopyRight Infratop.inc</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+    
   </body>
 </html>
