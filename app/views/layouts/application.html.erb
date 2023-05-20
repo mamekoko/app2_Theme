@@ -24,34 +24,33 @@
         <span>
         <%= link_to "Bookers", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com", class: "navbar-brand text-white" %>
         </span>
-        
+
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      
+
             <ul class="navbar-nav ml-auto">
-      
-              <li>
-      
-                <%= link_to "Home", "/users", class: "nav-link text-light" %>
+
+              <li class="nav-link text-light">
                 <i class="fas fa-home"></i>
+                <%= link_to "Home", "/users", class: "text-light" %>
               </li>
-      
+
               <li class="nav-link text-light">
                 <i class="fas fa-users"></i>
-                <%= link_to "Users", "/users" %>
+                <%= link_to "Users", "/users", class: "text-light" %>
               </li>
-      
+
               <li class="nav-link text-light">
                 <i class="fas fa-book-open"></i>
-                <%= link_to "Books", "/books" %>
+                <%= link_to "Books", "/books", class: "text-light" %>
               </li>
-      
+
               <li class="nav-link text-light">
                 <i class="fas fa-sign-in-alt"></i>
-                <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "text-light" %>
               </li>
-      
+
             </ul>
-          
+
           </div>
 
       </div>
@@ -59,32 +58,32 @@
     <% else %>
       <div class="container">
 
-        <span class="navbar-brand">
-        <%= link_to "Bookers", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com" %>
+        <span>
+        <%= link_to "Bookers", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com", class: "navbar-brand text-light" %>
         </span>
-        
-    
+
+
 
       <ul class="navbar-nav ml-auto">
 
         <li class="nav-link text-light">
           <i class="fas fa-home"></i>
-          <%= link_to "Home", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com" %>
+          <%= link_to "Home", "https://ce878f0fc8cf46bebdf41868bf9f4780.vfs.cloud9.ap-northeast-1.amazonaws.com", class: "text-light" %>
         </li>
 
         <li class="nav-link text-light">
           <i class="fas fa-link"></i>
-          <%= link_to "About", "homes/about" %>
+          <%= link_to "About", "homes/about", class: "text-light" %>
         </li>
 
         <li class="nav-link text-light">
           <i class="fas fa-user-plus"></i>
-          <%= link_to "Sign Up", new_user_registration_path %>
+          <%= link_to "Sign Up", new_user_registration_path, class: "text-light" %>
         </li>
 
         <li class="nav-link text-ligth">
           <i class="fas fa-sign-in-alt"></i>
-          <%= link_to "Log in", new_user_session_path %>
+          <%= link_to "Log in", new_user_session_path, class: "text-light" %>
         </li>
 
       </ul>
