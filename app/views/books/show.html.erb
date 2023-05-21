@@ -3,7 +3,7 @@
        <%= flash[:notice] %>
      </p>
    <% end %>
-   
+
 
 
 <div class="container px-5 px-sm-0">
@@ -69,7 +69,13 @@
         <table class="table">
             <tbody>
               <tr>
-                <td><%= @user.name %></td>
+                <td>
+                  <%= link_to user_path(@user.id) do %>
+                    <%= image_tag @user.get_profile_image %>
+                  <% end %>
+                  <br>
+                  <%= link_to @user.name, user_path(@user.id) %>
+                </td>
                 <td><%= @book.title %></td>
                 <td><%= @book.body %></td>
 
