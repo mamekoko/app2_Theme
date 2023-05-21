@@ -1,6 +1,6 @@
 
 <% if Book.new.errors.any? %>
-  <%= Book.new.count %>件のエラーが発生しました
+  <h3><%= Book.new.errors.count %>errors prohibited this obj from being saved:</h3>
   <ul>
     <% Book.new.errors.full_messages.each do |message| %>
       <li><%= message %></li>
@@ -20,7 +20,7 @@
 
 
 
-    <tbody>
+    <tbody class="form-group">
       <tr>
         <td>name</td>
         <td><%= @user.name %></td>
@@ -76,7 +76,7 @@
             <th colspan="3"></th>
           </tr>
         </thead>
-    <% @book.each do |book| %>
+    <% Book.all.each do |book| %>
         <tbody>
           <tr>
             <td>
