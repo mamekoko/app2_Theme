@@ -5,7 +5,7 @@
 
     <h2>User info</h2>
 
-    <%= image_tag @user.get_image %>
+    <%= image_tag @user.get_image, size:"100x100" %>
 
   <table class="table">
 
@@ -70,8 +70,8 @@
     <% @book.each do |book| %>
         <tbody>
           <tr>
-            <td></td>
-            <td><%= book.title %></td>
+            <td><%= image_tag @user.get_image %></td>
+            <td><%= link_to book.title, book_path(book.id) %></td>
             <td><%= book.body %></td>
           </tr>
         </tbody>

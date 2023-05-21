@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = current_
   end
 
   def edit
