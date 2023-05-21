@@ -1,4 +1,12 @@
 
+<% if Book.new.errors.any? %>
+  <%= Book.new.count %>件のエラーが発生しました
+  <ul>
+    <% Book.new.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+<% end %>
 
 <div class="container px-5 px-sm-0">
  <div class="row">
