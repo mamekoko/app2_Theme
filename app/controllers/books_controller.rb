@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-before_action :ensure_user, only: [:edit, :update, :destroy]
+before_action :ensure_book, only: [:edit, :update, :destroy]
 
 
   def index
@@ -26,7 +26,6 @@ before_action :ensure_user, only: [:edit, :update, :destroy]
   def show
     @book = Book.find(params[:id])
     @user = User.find(params[:id])
-    
   end
 
   def edit
@@ -55,10 +54,10 @@ before_action :ensure_user, only: [:edit, :update, :destroy]
     params.require(:book).permit(:title, :body, :image)
   end
 
-  def ensure_user
+  def ensure_book
     @books = current_user.books
     @book = @books.find_by(id: params[:id])
-    redirect_to new_post_path unless @book
+    redirect_to book_path(book.id)
   end
 
 
