@@ -1,8 +1,4 @@
-<% if flash[:notice] %>
-     <p id="notice">
-       <%= flash[:notice] %>
-     </p>
-   <% end %>
+
 
 
 
@@ -79,11 +75,12 @@
                 <td><%= @book.title %></td>
                 <td><%= @book.body %></td>
 
+              <% if @book.user == current_user %>
                 <td>
                   <%= link_to "Edit", edit_book_path(@book.id), class: "btn btn-sm btn-success edit_book_id" %>
                 </td>
 
-              <% if @book.user == current_user %>
+
                 <td>
                   <%= link_to "Destroy", book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？", class: "btn btn-sm btn-danger destroy_book_id" %>
                 </td>

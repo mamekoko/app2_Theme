@@ -1,8 +1,3 @@
-<% if flash[:notice] %>
-     <p id="notice">
-       <%= flash[:notice] %>
-     </p>
-   <% end %>
 
 
 
@@ -67,7 +62,7 @@
       <h2>Books</h2>
 
       <table class="table table-hover table-inverse">
-        <thead>
+       <thead>
           <tr>
             <th></th>
             <th>Title</th>
@@ -76,20 +71,15 @@
           </tr>
         </thead>
 
-        <% @book.each do |book| %>
+        <% @books.each do |book| %>
         <tbody>
           <tr>
-            <td>
-              <%= link_to user_path(@user.id) do %>
-                <%= image_tag @user.get_profile_image %>
-              <% end %>
-            </td>
+            <td><%= image_tag @user.get_profile_image, size:"100x100" %></td>
             <td><%= link_to book.title, book_path(book.id) %></td>
             <td><%= book.body %></td>
           </tr>
         </tbody>
         <% end %>
-
 
       </table>
 
